@@ -27,7 +27,7 @@ if TraditionalClothing == 'yes':
 UserEstimatedTime +=PrepTime
 
 #Deal with LocationDistance
-UserestimatedTime += LocationDistance
+UserEstimatedTime += LocationDistance
 
 #trying to deal with time
 Hours = int(UserEstimatedTime)
