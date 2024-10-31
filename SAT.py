@@ -4,8 +4,8 @@
 EventImportance = int(input("What is the importance or urgency of the event? (enter # between 1-5) "))
 TraditionalClothing = (input("Are you wearing traditional clothing?  "))
 UserEstimatedTime = int(input("What is the estimated time? (enter in numbers, 24 hour format, use decimals instead of minutes)  "))
-PrepTime = int(input("Will it take extra time to prepare? If so, how much? If not, put 0  "))
-LocationDistance = int(input("Are we going Far away to meet? If so, how far (in HRS.) If not, put 0  "))
+PrepTime = int(input("Will it take extra time to prepare? If so, how much (in Hrs)? If not, put 0  "))
+LocationDistance = int(input("Are we going far away to meet? If so, how far (in Hrs.) If not, put 0  "))
 
 #deal with EventImportance
 if EventImportance == 1:
@@ -22,6 +22,12 @@ elif EventImportance == 5:
 #deal with TraditionalClothing
 if TraditionalClothing == 'yes':
     UserEstimatedTime +=1.5
+
+#deal with PrepTime
+UserEstimatedTime +=PrepTime
+
+#Deal with LocationDistance
+UserestimatedTime += LocationDistance
 
 #trying to deal with time
 Hours = int(UserEstimatedTime)
